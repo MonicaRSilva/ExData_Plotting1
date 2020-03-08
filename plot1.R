@@ -5,7 +5,7 @@ coln <- read.table("household_power_consumption.txt",sep=";",nrows=1,stringsAsFa
 colnames(table) <- as.character(coln)
 
 #Plot 1
-windows.options(width=480,height=480)
+X11.options(width=480,height=480)
 hist(table$Global_active_power, main="Global Active Power",xlab= "Global Active Power (killowatts)", col="red")
 dev.copy(png,file="plot1.png")
 dev.off()
